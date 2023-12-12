@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <script type="module" src="./index.js"></script>
+  </head>
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .photo-card {
+      width: 300px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+    }
+    .info {
+      margin-top: 10px;
+    }
+
+    .info-item {
+      margin: 5px 0;
+    }
+
+    .load-more {
+      display: none;
+      margin-top: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <form class="search-form" id="search-form">
+      <input
+        type="text"
+        name="searchQuery"
+        autocomplete="off"
+        placeholder="Search images..."
+      />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="gallery" id="gallery">
+      <!-- Obraz karty -->
+    </div>
+
+    <button type="button" class="load-more">Load more</button>
+    <!-- <include src="./partials/example.html"></include> -->
+  </body>
+</html>
