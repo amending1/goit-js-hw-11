@@ -2,7 +2,6 @@ import Notiflix from 'notiflix';
 import axios from 'axios';
 axios.defaults.headers.common['x-api-key'] =
   'live_6iBgCXZRlrmB01CH5KRgYAQ7uz4Rs6J14X5chxd4DcenYSIATPoSJzkRfPujPiVS';
-import { searchImages } from 'pixabay-api';
 
 const form = document.getElementById('search-form');
 const gallery = document.getElementById('gallery');
