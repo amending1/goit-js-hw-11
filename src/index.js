@@ -87,15 +87,15 @@ function handleSearchResults(data) {
   }
 
   //Ustawiam widoczność przycisku "Load more" na podstawie warunku, czy liczba obrazków na stronie jest mniejszee niz łączna liczba obrazków
-  if (hits.length < totalHits) {
+  if (totalHits >= currentPage * 40) {
+    // jeżlei istnieją kolejne strony, zwiększam wartość
+    currentPage++;
     loadMoreBtn.style.display = 'block';
   } else {
     loadMoreBtn.style.display = 'none';
-    if (totalHits > 0) {
-      Notiflix.Notify.info(
-        'Sorry, there are no more images matching your search query.'
-      );
-    }
+    Notiflix.Notify.info(
+      'Sorry, there are no more images matching your search query.'
+    );
   }
 
   // tworzę tablicę, a potem dla każdego elementu w 'hits' (tablica stworzona w funkcji 'searchImages') jest tworzony kafelek 'card' i dodawany do tej tablicy
