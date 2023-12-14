@@ -87,7 +87,7 @@ function handleSearchResults(data) {
   }
 
   //Ustawiam widoczność przycisku "Load more" na podstawie warunku, czy liczba obrazków na stronie jest mniejszee niz łączna liczba obrazków
-  if (totalHits >= currentPage * 40) {
+  if (totalHits > currentPage * 40) {
     // jeżlei istnieją kolejne strony, zwiększam wartość
     currentPage++;
     loadMoreBtn.style.display = 'block';
