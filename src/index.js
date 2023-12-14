@@ -91,6 +91,11 @@ function handleSearchResults(data) {
     loadMoreBtn.style.display = 'block';
   } else {
     loadMoreBtn.style.display = 'none';
+    if (totalHits > 0) {
+      Notiflix.Notify.info(
+        'Sorry, there are no more images matching your search query.'
+      );
+    }
   }
 
   // tworzę tablicę, a potem dla każdego elementu w 'hits' (tablica stworzona w funkcji 'searchImages') jest tworzony kafelek 'card' i dodawany do tej tablicy
