@@ -34,8 +34,8 @@ form.addEventListener('submit', async function (event) {
 loadMoreBtn.addEventListener('click', async function () {
   //zwiększam wartość o 1 (kiedy użytkownik kliknie przycisk, chcę pobrać kolejną stronę wynikow)
   currentPage++;
-
-  // chcę użyć tego samego zapytania wyszukiwania, które zostało wprowadzone wcześniej
+  
+    // chcę użyć tego samego zapytania wyszukiwania, które zostało wprowadzone wcześniej
   const searchQuery = form.searchQuery.value.trim();
 
   // wywołuję funkcję 'searchImages' z NOWYM numerem strony
@@ -88,9 +88,7 @@ function handleSearchResults(data) {
 
   //Ustawiam widoczność przycisku "Load more" na podstawie warunku, czy liczba obrazków na stronie jest mniejszee niz łączna liczba obrazków
   if (totalHits > currentPage * 40) {
-    // jeżlei istnieją kolejne strony, zwiększam wartość
-    currentPage++;
-    loadMoreBtn.style.display = 'block';
+      loadMoreBtn.style.display = 'block';
   } else {
     loadMoreBtn.style.display = 'none';
     Notiflix.Notify.info(
